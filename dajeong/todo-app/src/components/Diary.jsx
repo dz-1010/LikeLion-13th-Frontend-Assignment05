@@ -44,6 +44,10 @@ export default function Diary() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!title.value.trim() || !content.value.trim()) {
+      return;
+    }
+
     alert("오늘 일기 제출 완료! 🕺");
 
     title.reset();
